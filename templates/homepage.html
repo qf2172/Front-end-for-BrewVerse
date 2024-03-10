@@ -1,0 +1,97 @@
+{% extends "layout.html" %} {% block content %}
+<script
+  type="text/javascript"
+  src="{{ url_for('static', filename = 'milktea.js') }}"
+></script>
+<script>
+  let data = {{ data|tojson }}
+</script>
+<h1 class="website-title">The Milk Tea Odyssey, A Journey for Every Taste!</h1>
+<div
+  id="carouselExampleCaptions"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="https://keywas.co/wp-content/uploads/2023/06/rolotazo_3_different_glasses_of_boba_tea_captured_by_canon_eos__a11903aa-f4f3-42ba-a521-95d1bfc03d1e-1024x344.png.webp"
+        class="d-block w-100"
+        alt="Discover the Classics"
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Discover the Classics</h5>
+        <p>Begin your journey with the timeless taste of classic milk tea.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://img.zcool.cn/community/01eb855bf597b4a80121ab5d0e737e.jpg@1280w_1l_2o_100sh.jpg"
+        class="d-block w-100"
+        alt="Exotic Blends Await"
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Exotic Blends Await</h5>
+        <p>
+          Dive into a world of unique flavors and find your unexpected favorite.
+        </p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://previews.123rf.com/images/stnazkul/stnazkul1804/stnazkul180400086/100105830-group-of-6-teenagers-having-fun-together-without-liquor-in-cafe-in-afternoon-drink-milk-tea-pink.jpg"
+        class="d-block w-100"
+        alt="Perfect for students"
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Perfect for students</h5>
+        <p>
+          Find your favorite milk tea to make your study sessions more
+          enjoyable.
+        </p>
+      </div>
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div id="milkTeaContainer" class="row"></div>
+{% endblock %}

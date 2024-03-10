@@ -1,0 +1,57 @@
+{% extends "layout.html" %} {% block content %}
+<script
+  type="text/javascript"
+  src="{{ url_for('static', filename = 'add.js') }}"
+></script>
+<div class="container">
+  <h2 class="edit-add-title">Add New Milk Tea</h2>
+  <div id="message"></div>
+  <form id="addMilkTeaForm">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" name="name" />
+      <span id="error-name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+      <label for="brand" class="form-label">Brand</label>
+      <input type="text" class="form-control" id="brand" name="brand" />
+      <span id="error-brand" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea
+        class="form-control"
+        id="description"
+        name="description"
+        rows="3"
+      ></textarea>
+      <span id="error-description" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+      <label for="rate" class="form-label">Rate</label>
+      <input step="0.1" class="form-control" id="rate" name="rate" />
+      <span id="error-rate" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+      <label for="image" class="form-label">Image URL</label>
+      <input type="url" class="form-control" id="image" name="image" />
+      <span id="error-image" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+      <label for="ingredients" class="form-label"
+        >Ingredients (comma separated)</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="ingredients"
+        name="ingredients"
+      />
+      <span id="error-ingredients" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-outline-dark submit-button">
+      Submit
+    </button>
+  </form>
+</div>
+{% endblock %}

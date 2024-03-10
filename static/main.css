@@ -1,0 +1,236 @@
+body {
+    background: white;
+}
+#milkTeaContainer {
+    margin-top: 50px;
+}
+.card-img-top {
+    width: 100%; 
+    height: 200px;
+    object-fit: cover;
+}
+.card {
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease-in-out;
+}
+.one_card_container {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.navclass {
+    margin-bottom: 20px;
+}
+.image_detail {
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+    height: 100%;
+}
+.card-image-detail {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.basicinfo {
+    padding-top:30px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: px;
+    height: auto;
+}
+.detail_title {
+    margin-bottom: 30px;
+}
+.image-basic-info {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+}
+.text {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.searchcomponent {
+    margin-bottom: 0px;
+}
+.carousel-item img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+.deletemarginrow {
+    margin-left: 0px;
+    margin-right: 0px;
+    display: flex;
+    width: 100%; 
+    align-items: stretch;
+    margin-top: 10px;
+}
+.deletepadding {
+    padding-left: 0px;
+    padding-right: 0px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    padding-top: 0px;
+    padding-bottom: 2rem;
+    font-weight: 600;
+}
+.addbottom{
+    margin-bottom: 1rem;
+} 
+
+.phar {
+    margin-left: 36px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+}
+.des {
+    margin-left: 36px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+
+.star {
+    font-size: 60px;
+    color: gray;
+    padding-left: 20px;
+}
+
+.filled {
+    color: gold;
+}
+
+#star-rating {
+    margin-top: 30px;
+
+}
+.similar {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.milk-tea-card {
+    height: auto;
+    width: 170px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 10px;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+.milk-tea-image {
+    width:170px;
+    height:170px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+}
+.milk-tea-name {
+    font-size: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+.custom-link {
+    color: inherit;
+    text-decoration: none;
+}
+.custom-link:hover,
+.custom-link:active,
+.custom-link:focus {
+    color: inherit;
+    text-decoration: none;
+}
+.website-title {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.edit-button {
+    width:100px;
+    float: right;
+    margin-bottom: 5px;
+    margin-right: 90px;
+    margin-top: -20px;
+}
+.search-button {
+    width:100px;
+    margin-left: 10px;
+}
+.website-logo {
+    width:50px;
+    height: auto;
+}
+.custom-navbar {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.navbar-brand {
+    margin-left: 10px;
+}
+.search-input {
+    width: 500px;
+    margin-left: -350px;
+}
+.edit-add-title {
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#addMilkTeaForm {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+#editMilkTeaForm {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.form-label {
+    font-weight: 700;
+}
+.submit-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.discardbutton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.clickable-text {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.clickable-text:hover {
+    color: #555;
+    transform: scale(2);
+}
+.search-result-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

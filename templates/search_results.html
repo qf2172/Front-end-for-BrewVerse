@@ -1,0 +1,30 @@
+{% extends "layout.html" %} {% block content %}
+<div class="container">
+  <h2 class="search-result-title">Search Results for "{{ query }}"</h2>
+  {% if total > 0 %}
+  <p>{{ total }} results found.</p>
+  <div class="row">
+    {% for id, item in items.items() %}
+    <div class="col-md-3 col-sm-6 mb-4">
+      <a href="/view/{{ id }}" class="custom-link">
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="{{ item.image }}"
+            alt="milk-tea-image"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ item.name|safe }}</h5>
+            <p class="text-muted">Brand: {{ item.brand|safe }}</p>
+            <p class="text-muted">Ingredients: {{ item.ingredients|safe }}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <h3 class="search-result-title">No results found for "{{ query }}".</h3>
+  {% endif %}
+</div>
+{% endblock %}

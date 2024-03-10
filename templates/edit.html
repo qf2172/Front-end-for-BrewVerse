@@ -1,0 +1,108 @@
+{% extends "layout.html" %} {% block content %}
+<script
+  type="text/javascript"
+  src="{{ url_for('static', filename = 'edit.js') }}"
+></script>
+<script>
+  let detail_data = {{ detail_data|tojson }}
+</script>
+<div class="container">
+  <h2 class="edit-add-title">Edit Milk Tea</h2>
+  <form id="editMilkTeaForm" action="" method="post">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        value="{{ detail_data.name }}"
+        required
+      />
+      <div id="error-name" class="text-danger"></div>
+    </div>
+
+    <div class="mb-3">
+      <label for="brand" class="form-label">Brand:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="brand"
+        name="brand"
+        value="{{ detail_data.brand }}"
+        required
+      />
+      <div id="error-brand" class="text-danger"></div>
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Description:</label>
+      <textarea
+        id="description"
+        class="form-control"
+        name="description"
+        required
+      >
+{{ detail_data.description }}</textarea
+      >
+      <div id="error-description" class="text-danger"></div>
+    </div>
+
+    <div class="mb-3">
+      <label for="image" class="form-label">Image URL:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="image"
+        name="image"
+        value="{{ detail_data.image }}"
+        required
+      />
+      <div id="error-image" class="text-danger"></div>
+    </div>
+
+    <div class="mb-3">
+      <label for="rate" class="form-label">Rate:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="rate"
+        name="rate"
+        value="{{ detail_data.rate }}"
+        required
+      />
+      <div id="error-rate" class="text-danger"></div>
+    </div>
+
+    <div class="mb-3">
+      <label for="ingredients" class="form-label"
+        >Ingredients (comma separated):</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="ingredients"
+        name="ingredients"
+        value="{{ detail_data.ingredients|join(', ') }}"
+        required
+      />
+      <div id="error-ingredients" class="text-danger"></div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-6">
+        <button type="submit" class="btn btn-outline-dark submit-button">
+          Submit
+        </button>
+      </div>
+      <div class="col-md-6 text-end">
+        <a
+          id="discardChanges"
+          href="{{ url_for('item_detail', id=detail_data.id) }}"
+          class="btn btn-secondary discardbutton"
+          >Discard Changes</a
+        >
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}
